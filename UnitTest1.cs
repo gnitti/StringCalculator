@@ -42,5 +42,60 @@ namespace StringCalculatorTests
       Assert.AreEqual(9, actual);
     }
 
+    [TestMethod]
+    public void StringaConNNumeriDiversiSeparatoriDeveRestituireLaSomma()
+    {
+      Calculator sut = new Calculator();
+      var parameter = "1\n2,3";
+      var actual = sut.Add(parameter);
+      Assert.AreEqual(6, actual);
+    }
+
+    [TestMethod]
+    [ExpectedException(typeof(System.FormatException))]
+    public void StringaConNNumeriDiversiSeparatoriNonValidiDeveRestituireEccezione()
+    {
+      Calculator sut = new Calculator();
+      var parameter = "1,\n";
+      var actual = sut.Add(parameter);
+      Assert.AreEqual(1, actual);
+    }
+
+    [TestMethod]
+    public void StringaConNNumeriDelimitatoriConfigurabiliDeveRestituireLaSomma()
+    {
+      Calculator sut = new Calculator();
+      var parameter = "//;\n1;2";
+      var actual = sut.Add(parameter);
+      Assert.AreEqual(3, actual);
+    }
+
+    [TestMethod]
+    public void StringaConNNumeriDelimitatoriConfigurabiliConUnaLineaDeveRestituireLaSomma()
+    {
+      Calculator sut = new Calculator();
+      var parameter = "1;2";
+      var actual = sut.Add(parameter);
+      Assert.AreEqual(3, actual);
+    }
+
+    [TestMethod]
+    [ExpectedException(typeof(NotNegativeAllowedException))]
+    public void StringaConNNumeriNegatioviDeveRestituireEccezione()
+    {
+      Calculator sut = new Calculator();
+      var parameter = "-1;-2";
+      var actual = sut.Add(parameter);
+      Assert.Fail();
+    }
+
+    [TestMethod]
+    public void StringaConNNumeri1000eRestituireLaSomma()
+    {
+      Calculator sut = new Calculator();
+      var parameter = "//;\n1000;2";
+      var actual = sut.Add(parameter);
+      Assert.AreEqual(2, actual);
+    }
   }
 }
