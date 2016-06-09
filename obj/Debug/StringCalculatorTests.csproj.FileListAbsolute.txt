@@ -1,0 +1,7 @@
+D:\Progetti\Fuffa\StringCalculatorTests\StringCalculatorTests\bin\Debug\StringCalculatorTests.dll
+D:\Progetti\Fuffa\StringCalculatorTests\StringCalculatorTests\bin\Debug\StringCalculatorTests.pdb
+D:\Progetti\Fuffa\StringCalculatorTests\StringCalculatorTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Progetti\Fuffa\StringCalculatorTests\StringCalculatorTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Progetti\Fuffa\StringCalculatorTests\StringCalculatorTests\obj\Debug\StringCalculatorTests.csprojResolveAssemblyReference.cache
+D:\Progetti\Fuffa\StringCalculatorTests\StringCalculatorTests\obj\Debug\StringCalculatorTests.dll
+D:\Progetti\Fuffa\StringCalculatorTests\StringCalculatorTests\obj\Debug\StringCalculatorTests.pdb
