@@ -33,5 +33,14 @@ namespace StringCalculatorTests
       Assert.AreEqual(6, actual);
     }
 
+    [TestMethod]
+    public void StringaConNNumeriDeveRestituireLaSomma()
+    {
+      Calculator sut = new Calculator();
+      var parameter = "1,5,1,2";
+      var actual = sut.Add(parameter);
+      Assert.AreEqual(9, actual);
+    }
+
   }
 }

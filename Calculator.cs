@@ -17,16 +17,23 @@ namespace StringCalculatorTests
         var listOfNUmber = parameter.Split(",".ToCharArray());
         if (listOfNUmber.Length > 0)
         {
-          foreach (var item in listOfNUmber)
-          {
-            retval = retval + int.Parse(item);
-          }
+          retval = EseguiSomma(retval, listOfNUmber);
         }
         else
         {
           int.TryParse(parameter, out retval);
         }
       }
+      return retval;
+    }
+
+    private static int EseguiSomma(int retval, string[] listOfNUmber)
+    {
+      foreach (var item in listOfNUmber)
+      {
+        retval = retval + int.Parse(item);
+      }
+
       return retval;
     }
   }
