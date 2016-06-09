@@ -83,10 +83,17 @@ namespace StringCalculatorTests
     [ExpectedException(typeof(NotNegativeAllowedException))]
     public void StringaConNNumeriNegatioviDeveRestituireEccezione()
     {
-      Calculator sut = new Calculator();
-      var parameter = "-1;-2";
-      var actual = sut.Add(parameter);
-      Assert.Fail();
+      try {
+        Calculator sut = new Calculator();
+        var parameter = "-1;-2";
+        var actual = sut.Add(parameter);
+        Assert.Fail();
+      }
+      catch(NotNegativeAllowedException ex)
+      {
+        Assert.AreEqual(2, ex.NegativeNumbers.Count);
+        throw ex;
+      }
     }
 
     [TestMethod]
